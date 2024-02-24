@@ -12,7 +12,6 @@ Welcome to the **C++ Data Structures Repository**! If you're a student or a begi
 ## Features
 
 - **Beginner-Friendly Code**: Each data structure implementation is written with clarity and simplicity, making it accessible for learners.
-- **Step-by-Step Examples**: Explore practical examples that demonstrate how to use these data structures effectively.
 - **Growing Collection**: We're continuously adding more data structures, so stay tuned!
 
 ## Data Structures
