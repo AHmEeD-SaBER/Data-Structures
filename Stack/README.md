@@ -12,10 +12,15 @@ Although less common, this order is also valid for certain scenarios.
 ##Key Characteristics of a Stack:
 
 Top: The end where elements are added or removed (like the top plate in our analogy).
+
 Push: Adding an element to the top of the stack.
+
 Pop: Removing an element from the top of the stack.
+
 Peek/Top Operation: Viewing the top element without removing it.
+
 Empty Stack: When no elements are present.
+
 Real-Life Analogy: Think of a stack as a pile of plates—each new plate goes on top, and when you need one, you take it from the top.
 
 ##Applications:
