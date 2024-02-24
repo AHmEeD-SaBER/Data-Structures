@@ -1,0 +1,59 @@
+#include <bits/stdc++.h>
+
+template <class T>
+class node{
+public:
+    T item;
+    node *nextItem;
+};
+
+template <class T>
+class stack{
+private:
+    node<T> *top;
+    int size = 0;
+public:
+
+    void pop(){
+        if(!size) throw("Stack is empty");
+        node<T> *temp = top;
+        top = top->nextItem;
+        temp = temp->nextItem = NULL;
+        delete temp;
+        size--;
+    }
+
+    //-------------------------------------------------------------------------------------//
+
+    void push(T item){
+        node<T> *temp = new node<T>;
+        temp->item = item;
+        temp->nextItem = top;
+        top = temp;
+        size++;
+    }
+
+    //-------------------------------------------------------------------------------------//
+
+    bool isEmpty(){
+        return size == 0;
+    }
+
+    //-------------------------------------------------------------------------------------//
+
+    int getSize(){
+        return size;
+    }
+
+    //-------------------------------------------------------------------------------------//
+
+    T getTop(){
+        if(!size) throw("Stack is empty");
+        return top->item;
+    }
+
+    //-------------------------------------------------------------------------------------//
+    stack() : top(NULL), size(0){}
+
+
+};
