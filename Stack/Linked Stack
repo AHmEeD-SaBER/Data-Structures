@@ -1,7 +1,7 @@
 #include <bits/stdc++.h>
 
 template <class T>
-class node{
+class node{      // The Node represents each element in the stack and has a pointer that points to the next item in the stack
 public:
     T item;
     node *nextItem;
@@ -15,9 +15,9 @@ private:
 public:
 
     void pop(){
-        if(!size) throw("Stack is empty");
-        node<T> *temp = top;
-        top = top->nextItem;
+        if(!size) throw("Stack is empty");  // To pop we need to make a temporary pointer that points to the top to
+        node<T> *temp = top;                // assign the next element to the top then delete this temp pointer,
+        top = top->nextItem;                // because we can't delete the top pointer and then assign a new value to it
         temp = temp->nextItem = NULL;
         delete temp;
         size--;
@@ -26,8 +26,8 @@ public:
     //-------------------------------------------------------------------------------------//
 
     void push(T item){
-        node<T> *temp = new node<T>;
-        temp->item = item;
+        node<T> *temp = new node<T>;        // to push we need to make a new node and assign its item to the new item
+        temp->item = item;                  // then make its nextItem points to the previous item then make it the top
         temp->nextItem = top;
         top = temp;
         size++;
@@ -53,7 +53,9 @@ public:
     }
 
     //-------------------------------------------------------------------------------------//
-    stack() : top(NULL), size(0){}
-
-
+    stack() : top(NULL), size(0){}  // default constructor
+    ~stack(){
+        delete top;                 // default destructor 
+    }
+    //-------------------------------------------------------------------------------------//
 };
